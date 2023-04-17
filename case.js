@@ -113,10 +113,6 @@ module.exports = alpha = async (alpha, m, chatUpdate, store, antilink, antiwame,
         const reply = (text) => {
             alpha.sendFakeLink(m.chat, text, salam, footer_text, pp_bot, myweb, pushname, m)
         }
-            catch (err) {
-                return '-'
-            }
-        }
         if (m.message) {
             alpha.readMessages([m.key])
             console.log(chalk.black(chalk.bgWhite('[ CMD ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> In'), chalk.green(m.isGroup ? pushname : 'Chat Pribadi', m.chat))
